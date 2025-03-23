@@ -9,5 +9,6 @@ data class IntervalEntity(
     val id: Long = 0L,
     val time: Long, // in milliseconds
     val sessionId: Long,
-    val orderInSession: Int
+    val orderInSession: Int,
+    val description: String?
 )
