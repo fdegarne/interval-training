@@ -66,24 +66,15 @@ room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", vers
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 
 gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 room = { id = "androidx.room", version.ref = "room" }
-
-# Plugins defined by this project
-intervals-android-application = { id = "intervals.android.application" }
-intervals-android-application-compose = { id = "intervals.android.application.compose" }
-intervals-room = { id = "intervals.room" }
-intervals-android-feature = { id = "intervals.android.feature" }
-intervals-android-library = { id = "intervals.android.library" }
-intervals-hilt = { id = "intervals.hilt" }
-intervals-jvm-library = { id = "intervals.jvm.library" }
 

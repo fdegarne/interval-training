@@ -36,31 +36,35 @@ tasks {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = libs.plugins.intervals.android.application.asProvider().get().pluginId
+            id = "intervals.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidApplicationCompose") {
-            id = libs.plugins.intervals.android.application.compose.get().pluginId
+            id = "intervals.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+        register("androidLibraryCompose") {
+            id = "intervals.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
         register("androidRoom") {
-            id = libs.plugins.intervals.room.get().pluginId
+            id = "intervals.room"
             implementationClass = "AndroidRoomConventionPlugin"
         }
         register("androidFeature") {
-            id = libs.plugins.intervals.android.feature.get().pluginId
+            id = "intervals.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
         register("androidLibrary") {
-            id = libs.plugins.intervals.android.library.get().pluginId
+            id = "intervals.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidHilt") {
-            id = libs.plugins.intervals.hilt.get().pluginId
+            id = "intervals.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
         register("androidJVMLibrary") {
-            id = libs.plugins.intervals.jvm.library.get().pluginId
+            id = "intervals.jvm.library"
             implementationClass = "AndroidJVMLibraryConventionPlugin"
         }
     }

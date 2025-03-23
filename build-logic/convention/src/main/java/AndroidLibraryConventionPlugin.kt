@@ -17,7 +17,6 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
-                apply("intervals.android.lint")
             }
 
             extensions.configure<LibraryExtension> {

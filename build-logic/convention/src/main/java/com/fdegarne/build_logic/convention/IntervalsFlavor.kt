@@ -15,10 +15,6 @@ enum class IntervalsFlavor(
     val dimension: FlavorDimension,
     val applicationIdSuffix: String? = null
 ) {
-    dev(
-        FlavorDimension.contentType,
-        applicationIdSuffix = ".dev"
-    ),
     prod(
         FlavorDimension.contentType
     ),
@@ -29,16 +25,18 @@ fun configureFlavors(
     flavorConfigurationBlock: ProductFlavor.(flavor: IntervalsFlavor) -> Unit = {},
 ) {
     commonExtension.apply {
-        flavorDimensions += FlavorDimension.contentType.name
+        FlavorDimension.values().forEach { flavorDimension ->
+            flavorDimensions += flavorDimension.name
+        }
 
         productFlavors {
-            IntervalsFlavor.values().forEach { intervalsFlavor ->
-                create(intervalsFlavor.name) {
-                    dimension = intervalsFlavor.dimension.name
-                    flavorConfigurationBlock(this, intervalsFlavor)
+            IntervalsFlavor.values().forEach { IntervalsFlavor ->
+                register(IntervalsFlavor.name) {
+                    dimension = IntervalsFlavor.dimension.name
+                    flavorConfigurationBlock(this, IntervalsFlavor)
                     if (this@apply is ApplicationExtension && this is ApplicationProductFlavor) {
-                        if (intervalsFlavor.applicationIdSuffix != null) {
-                            applicationIdSuffix = intervalsFlavor.applicationIdSuffix
+                        if (IntervalsFlavor.applicationIdSuffix != null) {
+                            applicationIdSuffix = IntervalsFlavor.applicationIdSuffix
                         }
                     }
                 }
