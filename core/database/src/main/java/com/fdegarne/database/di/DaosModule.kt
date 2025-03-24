@@ -1,8 +1,8 @@
 package com.fdegarne.database.di
 
 import com.fdegarne.database.IntervalsDatabase
-import com.fdegarne.database.dao.IntervalDao
-import com.fdegarne.database.dao.SessionDao
+import com.fdegarne.database.interval.IntervalDao
+import com.fdegarne.database.session.SessionDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

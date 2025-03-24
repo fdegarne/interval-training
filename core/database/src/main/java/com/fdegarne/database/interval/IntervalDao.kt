@@ -1,4 +1,4 @@
-package com.fdegarne.database.dao
+package com.fdegarne.database.interval
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface IntervalDao {
     @Query("SELECT * FROM intervals WHERE sessionId = :sessionId ORDER BY orderInSession")
-    fun getIntervalsEntities(sessionId: Long): Flow<List<IntervalEntity>>
+    fun getIntervalEntities(sessionId: Long): Flow<List<IntervalEntity>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertIntervalEntity(interval: IntervalEntity): Long

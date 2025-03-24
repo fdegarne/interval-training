@@ -1,4 +1,4 @@
-package com.fdegarne.intervals.ui.theme
+package com.fdegarne.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

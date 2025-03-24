@@ -1,4 +1,4 @@
-package com.fdegarne.database.dao
+package com.fdegarne.database.session
 
 import androidx.room.Dao
 import androidx.room.Delete
